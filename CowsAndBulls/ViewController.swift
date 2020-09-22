@@ -21,7 +21,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        startNewGame()
     }
     
     override var representedObject: Any? {
@@ -61,5 +61,19 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         return false
     }
     
+    func startNewGame(){
+        guess.stringValue = ""
+        guesses.removeAll()
+        answer = ""
+        
+        var numbers = Array(0...9)
+        numbers.shuffle()
+        
+        for _ in 0 ..< 4 {
+            answer.append(String(numbers.removeLast()))
+        }
+        
+        tableView.reloadData()
+    }
 }
 
