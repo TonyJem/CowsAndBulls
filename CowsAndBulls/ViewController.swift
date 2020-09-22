@@ -38,7 +38,20 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
     
     func result (for guess: String) -> String {
-        return "Result"
+        var bulls = 0
+        var caws = 0
+        
+        let guessLetters = Array(guess)
+        let answerLetter = Array(answer)
+        
+        for (index, letter) in guessLetters.enumerated() {
+            if letter == answerLetter[index] {
+                bulls += 1
+            } else if answerLetter.contains(letter) {
+                caws += 1
+            }
+        }
+        return " \(bulls)b \(caws)c"
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
