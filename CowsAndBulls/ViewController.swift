@@ -9,6 +9,9 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet var tableView: NSTableView!
+    @IBOutlet var guess: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +24,8 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func submitGuess(_ sender: Any) {
+    }
+    
 }
 
