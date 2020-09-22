@@ -44,6 +44,18 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         // add the guess to the array and table view
         guesses.insert(guessString, at: 0)
         tableView.insertRows(at: IndexSet(integer: 0), withAnimation: .slideDown)
+        
+        // Did the player win?
+        let resultString = result(for: guessString)
+        
+        if resultString.contains("4b") {
+            let alert = NSAlert()
+            alert.messageText = "You win"
+            alert.informativeText = "Congratulations! Click OK to play again."
+            alert.runModal()
+            
+            startNewGame()
+        }
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
