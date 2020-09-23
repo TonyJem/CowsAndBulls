@@ -166,6 +166,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         
         switch tableColumn?.title {
         
+        case "Nr.":
+            vw.textField?.stringValue = "\(guesses.count)."
         case "#1":
             vw.textField?.stringValue = String(numberAsArray[0])
         case "#2":
@@ -174,7 +176,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             vw.textField?.stringValue = String(numberAsArray[2])
         case "#4":
             vw.textField?.stringValue = String(numberAsArray[3])
-        case "Overlaps : in Place":
+        case "Matched : in Place":
             vw.textField?.stringValue = "\(bulls + caws) : \(bulls)"
         case "Bulls : Cows":
             vw.textField?.stringValue = "\(bulls)b : \(caws)c"
