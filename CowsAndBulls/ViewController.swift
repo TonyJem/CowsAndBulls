@@ -9,6 +9,18 @@ import Cocoa
 
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
+    
+    @IBOutlet var num1CheckBox: NSButton!
+    @IBOutlet var num2CheckBox: NSButton!
+    @IBOutlet var num3CheckBox: NSButton!
+    @IBOutlet var num4CheckBox: NSButton!
+    @IBOutlet var num5CheckBox: NSButton!
+    @IBOutlet var num6CheckBox: NSButton!
+    @IBOutlet var num7CheckBox: NSButton!
+    @IBOutlet var num8CheckBox: NSButton!
+    @IBOutlet var num9CheckBox: NSButton!
+    @IBOutlet var num0CheckBox: NSButton!
+    
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var guess: NSTextField!
     
@@ -50,7 +62,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         
         if resultString.contains("4b") {
             let alert = NSAlert()
-            alert.messageText = "You win"
+            alert.messageText = "You win !!!"
             alert.informativeText = "Congratulations! Click OK to play again."
             alert.runModal()
             
@@ -100,6 +112,18 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
     
     func startNewGame(){
+        
+        num1CheckBox.state = NSControl.StateValue.on
+        num2CheckBox.state = NSControl.StateValue.on
+        num3CheckBox.state = NSControl.StateValue.on
+        num4CheckBox.state = NSControl.StateValue.on
+        num5CheckBox.state = NSControl.StateValue.on
+        num6CheckBox.state = NSControl.StateValue.on
+        num7CheckBox.state = NSControl.StateValue.on
+        num8CheckBox.state = NSControl.StateValue.on
+        num9CheckBox.state = NSControl.StateValue.on
+        num0CheckBox.state = NSControl.StateValue.on
+        
         guess.stringValue = ""
         guesses.removeAll()
         answer = ""
