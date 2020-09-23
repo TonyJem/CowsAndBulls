@@ -97,12 +97,21 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             return nil
         }
         
-        if tableColumn?.title == "Guess" {
-            // this is the Guess column, show a previuos guess
+        switch tableColumn?.title {
+        case "#1":
+            vw.textField?.stringValue = "1"
+        case "#2":
+            vw.textField?.stringValue = "2"
+        case "#3":
+            vw.textField?.stringValue = "3"
+        case "#4":
+            vw.textField?.stringValue = "4"
+        case "Guess":
             vw.textField?.stringValue = guesses[row]
-        } else {
-            // this is the Result column, call our new method
+        case "Result":
             vw.textField?.stringValue = result(for: guesses[row])
+        default:
+            vw.textField?.stringValue = ""
         }
         
         return vw
