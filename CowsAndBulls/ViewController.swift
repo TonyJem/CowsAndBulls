@@ -59,9 +59,9 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         tableView.insertRows(at: IndexSet(integer: 0), withAnimation: .slideDown)
         
         // Did the player win?
-        let resultString = result(for: guessString)
+        let resultArray = result(for: guessString)
         
-        if resultString.contains("4b") {
+        if resultArray == [4,0] {
             let alert = NSAlert()
             alert.messageText = "You win !!!"
             alert.informativeText = "Congratulations! Click OK to play again."
@@ -75,21 +75,21 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         return guesses.count
     }
     
-    func result (for guess: String) -> String {
+    func result (for guess: String) -> [Int] {
         var bulls = 0
         var caws = 0
         
         let guessLetters = Array(guess)
-        let answerLetter = Array(answer)
+        let answerLetters = Array(answer)
         
         for (index, letter) in guessLetters.enumerated() {
-            if letter == answerLetter[index] {
+            if letter == answerLetters[index] {
                 bulls += 1
-            } else if answerLetter.contains(letter) {
+            } else if answerLetters.contains(letter) {
                 caws += 1
             }
         }
-        return " \(bulls)b \(caws)c"
+        return [bulls,caws]
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -99,7 +99,11 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         let currentNumber = guesses[row]
         let numberAsArray = Array(currentNumber)
         
+        let bulls = result(for: guesses[row])[0]
+        let caws = result(for: guesses[row])[1]
+        
         switch tableColumn?.title {
+
         case "#1":
             vw.textField?.stringValue = String(numberAsArray[0])
         case "#2":
@@ -108,10 +112,10 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             vw.textField?.stringValue = String(numberAsArray[2])
         case "#4":
             vw.textField?.stringValue = String(numberAsArray[3])
-        case "Guess":
-            vw.textField?.stringValue = "" // guesses[row]
-        case "Result":
-            vw.textField?.stringValue = result(for: guesses[row])
+        case "OK":
+            vw.textField?.stringValue = "\(bulls + caws)" //"\(bulls + caws) : \(bulls)"
+        case "in Place":
+            vw.textField?.stringValue = "\(bulls)"// "\(bulls)b \(caws)c"
         default:
             vw.textField?.stringValue = ""
         }
