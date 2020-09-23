@@ -25,6 +25,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var guess: NSTextField!
     
+    
+    
     //    Correct answer
     var answer = ""
     
@@ -41,6 +43,10 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         didSet {
             // Update the view, if already loaded.
         }
+    }
+    
+    @IBAction func menuNewGame (_ sender: Any) {
+        startNewGame()
     }
     
     @IBAction func submitGuess(_ sender: Any) {
