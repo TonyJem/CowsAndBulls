@@ -96,18 +96,20 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         guard let vw = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else {
             return nil
         }
+        let currentNumber = guesses[row]
+        let numberAsArray = Array(currentNumber)
         
         switch tableColumn?.title {
         case "#1":
-            vw.textField?.stringValue = "1"
+            vw.textField?.stringValue = String(numberAsArray[0])
         case "#2":
-            vw.textField?.stringValue = "2"
+            vw.textField?.stringValue = String(numberAsArray[1])
         case "#3":
-            vw.textField?.stringValue = "3"
+            vw.textField?.stringValue = String(numberAsArray[2])
         case "#4":
-            vw.textField?.stringValue = "4"
+            vw.textField?.stringValue = String(numberAsArray[3])
         case "Guess":
-            vw.textField?.stringValue = guesses[row]
+            vw.textField?.stringValue = "" // guesses[row]
         case "Result":
             vw.textField?.stringValue = result(for: guesses[row])
         default:
