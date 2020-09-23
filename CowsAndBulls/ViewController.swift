@@ -10,6 +10,7 @@ import Cocoa
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
     
+//    test if current GitHub branch is splitTable
     @IBOutlet var num1CheckBox: NSButton!
     @IBOutlet var num2CheckBox: NSButton!
     @IBOutlet var num3CheckBox: NSButton!
