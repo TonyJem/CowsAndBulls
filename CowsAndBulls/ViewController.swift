@@ -118,10 +118,10 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             vw.textField?.stringValue = String(numberAsArray[2])
         case "#4":
             vw.textField?.stringValue = String(numberAsArray[3])
-        case "Overlaps":
-            vw.textField?.stringValue = "\(bulls + caws)" //"\(bulls + caws) : \(bulls)"
-        case "in Place":
-            vw.textField?.stringValue = "\(bulls)"// "\(bulls)b \(caws)c"
+        case "Overlaps : in Place":
+            vw.textField?.stringValue = "\(bulls + caws) : \(bulls)"
+        case "Bulls : Cows":
+            vw.textField?.stringValue = "\(bulls)b : \(caws)c"
         default:
             vw.textField?.stringValue = ""
         }
