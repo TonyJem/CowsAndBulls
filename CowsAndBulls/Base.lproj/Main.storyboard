@@ -129,10 +129,11 @@
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Cows and Bulls" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="250" height="397"/>
+                        <windowPositionMask key="initialPositionMask" topStrut="YES"/>
+                        <rect key="contentRect" x="196" y="450" width="349" height="397"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="250" height="397"/>
-                        <value key="maxSize" type="size" width="250" height="600"/>
+                        <value key="minSize" type="size" width="349" height="397"/>
+                        <value key="maxSize" type="size" width="349" height="900"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -612,9 +613,14 @@ DQ
                                             </button>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E85-sM-83l">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="HwK-3S-IyF"/>
+                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="HwK-3S-IyF">
+                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" formatWidth="-1" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="B9m-TN-4Rt">
+                                                        <real key="minimum" value="0.0"/>
+                                                        <real key="maximum" value="9"/>
+                                                    </numberFormatter>
+                                                </stepperCell>
                                                 <connections>
-                                                    <action selector="digit1StepperClicked:" target="XfG-lQ-9wD" id="az2-tE-leg"/>
+                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="RVN-1s-PTy"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -643,9 +649,12 @@ DQ
                                                     <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="jgW-GK-1N2"/>
                                                 </connections>
                                             </button>
-                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-im-xHZ">
+                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-im-xHZ">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="XjQ-Rx-zDd"/>
+                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="XjQ-Rx-zDd"/>
+                                                <connections>
+                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="rZB-qi-2Gf"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <visibilityPriorities>
@@ -673,9 +682,12 @@ DQ
                                                     <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="BFz-UC-07p"/>
                                                 </connections>
                                             </button>
-                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-Ec-zyd">
+                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-Ec-zyd">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="u8b-1m-Zq9"/>
+                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="u8b-1m-Zq9"/>
+                                                <connections>
+                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="aX7-Je-yn5"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <visibilityPriorities>
@@ -703,9 +715,12 @@ DQ
                                                     <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="q95-Yz-9eL"/>
                                                 </connections>
                                             </button>
-                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-Le-jp4">
+                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-Le-jp4">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="IgJ-j7-lbu"/>
+                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="IgJ-j7-lbu"/>
+                                                <connections>
+                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="QN8-Vi-tzl"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <visibilityPriorities>
@@ -772,7 +787,7 @@ DQ
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.5" y="939"/>
+            <point key="canvasLocation" x="76" y="870"/>
         </scene>
     </scenes>
 </document>

@@ -9,8 +9,6 @@ import Cocoa
 
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
-    
-//    test if current GitHub branch is splitTable
     @IBOutlet var num1CheckBox: NSButton!
     @IBOutlet var num2CheckBox: NSButton!
     @IBOutlet var num3CheckBox: NSButton!
@@ -36,17 +34,17 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet var digit3Stepper: NSStepper!
     @IBOutlet var digit4Stepper: NSStepper!
     
-    
-    
     //    Correct answer
     var answer = ""
     
     //    Array to store player's guesses
     var guesses = [String]()
     
+    //    Array for check-box numbers
+    var checkBoxNumbers = Array(0...9)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         startNewGame()
     }
     
@@ -60,19 +58,50 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         startNewGame()
     }
     
-    
     @IBAction func digitButtonsClicked(_ sender: NSButton){
+        let stepper = currentStepperIs(for: sender)
         if sender.state == NSControl.StateValue.on {
-            digit2Stepper.isEnabled = true
+            stepper.isEnabled = true
         } else {
-            digit2Stepper.isEnabled = false
+            stepper.isEnabled = false
         }
-        print("Clicked \(sender.tag) button")
     }
     
-    @IBAction func digit1StepperClicked(_ sender: NSStepper) {
-        
+    @IBAction func digitSteppersClicked(_ sender: NSStepper) {
+        let button = currentButtonIs(for: sender)
+        button.title = String(checkBoxNumbers[Int(sender.intValue)])
     }
+    
+    func currentStepperIs(for sender: NSControl) -> NSStepper {
+        var currentStepper: NSStepper
+        switch sender.tag {
+        case 1:
+            currentStepper = digit2Stepper
+        case 2:
+            currentStepper = digit3Stepper
+        case 3:
+            currentStepper = digit4Stepper
+        default:
+            currentStepper = digit1Stepper
+        }
+        return currentStepper
+    }
+  
+    func currentButtonIs(for sender: NSControl) -> NSButton {
+        var currentButton: NSButton
+        switch sender.tag {
+        case 1:
+            currentButton = digit2Btn
+        case 2:
+            currentButton = digit3Btn
+        case 3:
+            currentButton = digit4Btn
+        default:
+            currentButton = digit1Btn
+        }
+        return currentButton
+    }
+    
     
     
     
@@ -97,7 +126,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         if resultArray == [4,0] {
             let alert = NSAlert()
             alert.messageText = "You win !!!"
-            alert.informativeText = "Congratulations! Click OK to play again."
+            alert.informativeText = "Congratulations! Click OK to play again.You did it in \(guesses.count) turns"
             alert.runModal()
             
             startNewGame()
@@ -136,7 +165,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         let caws = result(for: guesses[row])[1]
         
         switch tableColumn?.title {
-
+        
         case "#1":
             vw.textField?.stringValue = String(numberAsArray[0])
         case "#2":
@@ -173,11 +202,16 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         num9CheckBox.state = NSControl.StateValue.on
         num0CheckBox.state = NSControl.StateValue.on
         
-        digit1Btn.title = "5"
-        digit2Btn.title = "6"
-        digit3Btn.title = "7"
-        digit4Btn.title = "8"
-    
+        digit1Btn.title = String(checkBoxNumbers[0])
+        digit2Btn.title = String(checkBoxNumbers[0])
+        digit3Btn.title = String(checkBoxNumbers[0])
+        digit4Btn.title = String(checkBoxNumbers[0])
+        
+        digit1Btn.state = NSControl.StateValue.on
+        digit2Btn.state = NSControl.StateValue.on
+        digit3Btn.state = NSControl.StateValue.on
+        digit4Btn.state = NSControl.StateValue.on
+        
         guess.stringValue = ""
         guesses.removeAll()
         answer = ""
