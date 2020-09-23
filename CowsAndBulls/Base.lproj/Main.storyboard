@@ -594,7 +594,7 @@ DQ
                             <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="9" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu">
                                 <rect key="frame" x="0.0" y="257" width="223" height="22"/>
                                 <subviews>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apf-4D-C1T">
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apf-4D-C1T" userLabel="1st Digit">
                                         <rect key="frame" x="0.0" y="0.0" width="49" height="22"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x30-Jz-dnZ">
@@ -602,14 +602,20 @@ DQ
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="ZFC-NW-w4F"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="push" title="8" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="eYP-8W-DmM">
+                                                <buttonCell key="cell" type="push" title="1" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="eYP-8W-DmM">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="ap3-Re-NGX"/>
+                                                </connections>
                                             </button>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E85-sM-83l">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="HwK-3S-IyF"/>
+                                                <connections>
+                                                    <action selector="digit1StepperClicked:" target="XfG-lQ-9wD" id="az2-tE-leg"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <visibilityPriorities>
@@ -621,18 +627,21 @@ DQ
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zf-ry-lKQ">
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zf-ry-lKQ" userLabel="2nd Digit">
                                         <rect key="frame" x="58" y="0.0" width="49" height="22"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-TN-SIx">
+                                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-TN-SIx">
                                                 <rect key="frame" x="-6" y="-6" width="49" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="WpB-B9-3Xs"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="push" title="8" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="ebw-Or-g9o">
+                                                <buttonCell key="cell" type="push" title="2" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="ebw-Or-g9o">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="jgW-GK-1N2"/>
+                                                </connections>
                                             </button>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-im-xHZ">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
@@ -648,18 +657,21 @@ DQ
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-Cb-MOa">
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-Cb-MOa" userLabel="3rd Digit">
                                         <rect key="frame" x="116" y="0.0" width="49" height="22"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="erh-wT-0vS">
+                                            <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="erh-wT-0vS">
                                                 <rect key="frame" x="-6" y="-6" width="49" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="7u7-bm-AEt"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="push" title="8" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="izw-A4-RHd">
+                                                <buttonCell key="cell" type="push" title="3" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="izw-A4-RHd">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="BFz-UC-07p"/>
+                                                </connections>
                                             </button>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-Ec-zyd">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
@@ -675,18 +687,21 @@ DQ
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfo-KI-HgN">
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfo-KI-HgN" userLabel="4th Digit">
                                         <rect key="frame" x="174" y="0.0" width="49" height="22"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-2p-yXF">
+                                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-2p-yXF">
                                                 <rect key="frame" x="-6" y="-6" width="49" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="nfM-ae-Ik7"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="push" title="9" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="8yh-fZ-Mgg">
+                                                <buttonCell key="cell" type="push" title="4" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="8yh-fZ-Mgg">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="q95-Yz-9eL"/>
+                                                </connections>
                                             </button>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-Le-jp4">
                                                 <rect key="frame" x="33" y="-3" width="19" height="28"/>
@@ -733,6 +748,14 @@ DQ
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="digit1Btn" destination="x30-Jz-dnZ" id="erz-oV-Ogk"/>
+                        <outlet property="digit1Stepper" destination="E85-sM-83l" id="mLS-BF-3ft"/>
+                        <outlet property="digit2Btn" destination="gr1-TN-SIx" id="yvW-fu-aYB"/>
+                        <outlet property="digit2Stepper" destination="7Cl-im-xHZ" id="6oa-Nd-rGe"/>
+                        <outlet property="digit3Btn" destination="erh-wT-0vS" id="2Aw-kL-fbR"/>
+                        <outlet property="digit3Stepper" destination="eYf-Ec-zyd" id="7le-0V-a1h"/>
+                        <outlet property="digit4Btn" destination="ghu-2p-yXF" id="iJu-B0-QEF"/>
+                        <outlet property="digit4Stepper" destination="qhq-Le-jp4" id="qdt-5V-PwY"/>
                         <outlet property="guess" destination="Ojw-t4-5UC" id="36j-51-S0r"/>
                         <outlet property="num0CheckBox" destination="pO0-Ke-yn1" id="vEc-jz-nBb"/>
                         <outlet property="num1CheckBox" destination="i5Z-cK-sHD" id="osB-NH-1UX"/>

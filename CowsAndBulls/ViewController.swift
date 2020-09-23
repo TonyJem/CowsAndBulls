@@ -26,6 +26,17 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet var guess: NSTextField!
     
     
+    @IBOutlet var digit1Btn: NSButton!
+    @IBOutlet var digit2Btn: NSButton!
+    @IBOutlet var digit3Btn: NSButton!
+    @IBOutlet var digit4Btn: NSButton!
+    
+    @IBOutlet var digit1Stepper: NSStepper!
+    @IBOutlet var digit2Stepper: NSStepper!
+    @IBOutlet var digit3Stepper: NSStepper!
+    @IBOutlet var digit4Stepper: NSStepper!
+    
+    
     
     //    Correct answer
     var answer = ""
@@ -48,6 +59,22 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBAction func menuNewGame (_ sender: Any) {
         startNewGame()
     }
+    
+    
+    @IBAction func digitButtonsClicked(_ sender: NSButton){
+        if sender.state == NSControl.StateValue.on {
+            digit2Stepper.isEnabled = true
+        } else {
+            digit2Stepper.isEnabled = false
+        }
+        print("Clicked \(sender.tag) button")
+    }
+    
+    @IBAction func digit1StepperClicked(_ sender: NSStepper) {
+        
+    }
+    
+    
     
     @IBAction func submitGuess(_ sender: Any) {
         
@@ -146,6 +173,11 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         num9CheckBox.state = NSControl.StateValue.on
         num0CheckBox.state = NSControl.StateValue.on
         
+        digit1Btn.title = "5"
+        digit2Btn.title = "6"
+        digit3Btn.title = "7"
+        digit4Btn.title = "8"
+    
         guess.stringValue = ""
         guesses.removeAll()
         answer = ""
