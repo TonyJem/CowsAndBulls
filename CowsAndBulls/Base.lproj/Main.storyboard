@@ -398,13 +398,13 @@ DQ
                                 </customSpacing>
                             </stackView>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAq-QM-Z9z">
-                                <rect key="frame" x="0.0" y="0.0" width="370" height="237"/>
+                                <rect key="frame" x="0.0" y="0.0" width="370" height="240"/>
                                 <clipView key="contentView" id="JbE-9d-odX">
-                                    <rect key="frame" x="1" y="0.0" width="368" height="236"/>
+                                    <rect key="frame" x="1" y="0.0" width="368" height="239"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="tNf-FG-ikA" viewBased="YES" id="Kpm-Xc-tkw">
-                                            <rect key="frame" x="0.0" y="0.0" width="368" height="211"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="368" height="214"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -624,146 +624,62 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="7" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu" userLabel="Digits Stack View">
-                                <rect key="frame" x="30" y="257" width="217" height="22"/>
+                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="7" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu" userLabel="Digits Stack View">
+                                <rect key="frame" x="30" y="260" width="405" height="19"/>
                                 <subviews>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apf-4D-C1T" userLabel="1st Digit">
-                                        <rect key="frame" x="0.0" y="0.0" width="49" height="22"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x30-Jz-dnZ">
-                                                <rect key="frame" x="-6" y="-6" width="49" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="37" id="ZFC-NW-w4F"/>
-                                                </constraints>
-                                                <buttonCell key="cell" type="push" title="1" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="eYP-8W-DmM">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="ap3-Re-NGX"/>
-                                                </connections>
-                                            </button>
-                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E85-sM-83l">
-                                                <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="HwK-3S-IyF">
-                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" formatWidth="-1" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="B9m-TN-4Rt">
-                                                        <real key="minimum" value="0.0"/>
-                                                        <real key="maximum" value="9"/>
-                                                    </numberFormatter>
-                                                </stepperCell>
-                                                <connections>
-                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="RVN-1s-PTy"/>
-                                                </connections>
-                                            </stepper>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zf-ry-lKQ" userLabel="2nd Digit">
-                                        <rect key="frame" x="56" y="0.0" width="49" height="22"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-TN-SIx">
-                                                <rect key="frame" x="-6" y="-6" width="49" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="37" id="WpB-B9-3Xs"/>
-                                                </constraints>
-                                                <buttonCell key="cell" type="push" title="2" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="ebw-Or-g9o">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="jgW-GK-1N2"/>
-                                                </connections>
-                                            </button>
-                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-im-xHZ">
-                                                <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="XjQ-Rx-zDd"/>
-                                                <connections>
-                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="rZB-qi-2Gf"/>
-                                                </connections>
-                                            </stepper>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-Cb-MOa" userLabel="3rd Digit">
-                                        <rect key="frame" x="112" y="0.0" width="49" height="22"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="erh-wT-0vS">
-                                                <rect key="frame" x="-6" y="-6" width="49" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="37" id="7u7-bm-AEt"/>
-                                                </constraints>
-                                                <buttonCell key="cell" type="push" title="3" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="izw-A4-RHd">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="BFz-UC-07p"/>
-                                                </connections>
-                                            </button>
-                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-Ec-zyd">
-                                                <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="u8b-1m-Zq9"/>
-                                                <connections>
-                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="aX7-Je-yn5"/>
-                                                </connections>
-                                            </stepper>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfo-KI-HgN" userLabel="4th Digit">
-                                        <rect key="frame" x="168" y="0.0" width="49" height="22"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-2p-yXF">
-                                                <rect key="frame" x="-6" y="-6" width="49" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="37" id="nfM-ae-Ik7"/>
-                                                </constraints>
-                                                <buttonCell key="cell" type="push" title="4" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="8yh-fZ-Mgg">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="digitButtonsClicked:" target="XfG-lQ-9wD" id="q95-Yz-9eL"/>
-                                                </connections>
-                                            </button>
-                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-Le-jp4">
-                                                <rect key="frame" x="33" y="-3" width="19" height="28"/>
-                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="9" id="IgJ-j7-lbu"/>
-                                                <connections>
-                                                    <action selector="digitSteppersClicked:" target="XfG-lQ-9wD" id="QN8-Vi-tzl"/>
-                                                </connections>
-                                            </stepper>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzP-EY-aun">
+                                        <rect key="frame" x="0.0" y="-4" width="99" height="25"/>
+                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="EMg-c7-oSR">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <objectValues>
+                                                <string>Item 1</string>
+                                                <string>Item 2</string>
+                                                <string>Item 3</string>
+                                                <string>Item</string>
+                                            </objectValues>
+                                        </comboBoxCell>
+                                    </comboBox>
+                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-YY-0LY">
+                                        <rect key="frame" x="103" y="-4" width="99" height="25"/>
+                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="Mwu-Yd-klp">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <objectValues>
+                                                <string>Item 1</string>
+                                                <string>Item 2</string>
+                                                <string>Item 3</string>
+                                            </objectValues>
+                                        </comboBoxCell>
+                                    </comboBox>
+                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzG-kW-M14">
+                                        <rect key="frame" x="206" y="-4" width="99" height="25"/>
+                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="Teg-30-awR">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <objectValues>
+                                                <string>Item 1</string>
+                                                <string>Item 2</string>
+                                                <string>Item 3</string>
+                                            </objectValues>
+                                        </comboBoxCell>
+                                    </comboBox>
+                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owr-JL-8XS">
+                                        <rect key="frame" x="309" y="-4" width="99" height="25"/>
+                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="bIg-GJ-Fbc">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <objectValues>
+                                                <string>Item 1</string>
+                                                <string>Item 2</string>
+                                                <string>Item 3</string>
+                                            </objectValues>
+                                        </comboBoxCell>
+                                    </comboBox>
                                 </subviews>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
@@ -795,14 +711,6 @@ DQ
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="digit1Btn" destination="x30-Jz-dnZ" id="erz-oV-Ogk"/>
-                        <outlet property="digit1Stepper" destination="E85-sM-83l" id="mLS-BF-3ft"/>
-                        <outlet property="digit2Btn" destination="gr1-TN-SIx" id="yvW-fu-aYB"/>
-                        <outlet property="digit2Stepper" destination="7Cl-im-xHZ" id="6oa-Nd-rGe"/>
-                        <outlet property="digit3Btn" destination="erh-wT-0vS" id="2Aw-kL-fbR"/>
-                        <outlet property="digit3Stepper" destination="eYf-Ec-zyd" id="7le-0V-a1h"/>
-                        <outlet property="digit4Btn" destination="ghu-2p-yXF" id="iJu-B0-QEF"/>
-                        <outlet property="digit4Stepper" destination="qhq-Le-jp4" id="qdt-5V-PwY"/>
                         <outlet property="guess" destination="Ojw-t4-5UC" id="36j-51-S0r"/>
                         <outlet property="num0CheckBox" destination="pO0-Ke-yn1" id="vEc-jz-nBb"/>
                         <outlet property="num1CheckBox" destination="i5Z-cK-sHD" id="osB-NH-1UX"/>

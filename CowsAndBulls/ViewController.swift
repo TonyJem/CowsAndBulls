@@ -24,15 +24,6 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet var guess: NSTextField!
     
     
-    @IBOutlet var digit1Btn: NSButton!
-    @IBOutlet var digit2Btn: NSButton!
-    @IBOutlet var digit3Btn: NSButton!
-    @IBOutlet var digit4Btn: NSButton!
-    
-    @IBOutlet var digit1Stepper: NSStepper!
-    @IBOutlet var digit2Stepper: NSStepper!
-    @IBOutlet var digit3Stepper: NSStepper!
-    @IBOutlet var digit4Stepper: NSStepper!
     
     //    Correct answer
     var answer = ""
@@ -53,57 +44,6 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             // Update the view, if already loaded.
         }
     }
-    
-    @IBAction func menuNewGame (_ sender: Any) {
-        startNewGame()
-    }
-    
-    @IBAction func digitButtonsClicked(_ sender: NSButton){
-        let stepper = currentStepperIs(for: sender)
-        if sender.state == NSControl.StateValue.on {
-            stepper.isEnabled = true
-        } else {
-            stepper.isEnabled = false
-        }
-    }
-    
-    @IBAction func digitSteppersClicked(_ sender: NSStepper) {
-        let button = currentButtonIs(for: sender)
-        button.title = String(checkBoxNumbers[Int(sender.intValue)])
-    }
-    
-    func currentStepperIs(for sender: NSControl) -> NSStepper {
-        var currentStepper: NSStepper
-        switch sender.tag {
-        case 1:
-            currentStepper = digit2Stepper
-        case 2:
-            currentStepper = digit3Stepper
-        case 3:
-            currentStepper = digit4Stepper
-        default:
-            currentStepper = digit1Stepper
-        }
-        return currentStepper
-    }
-    
-    func currentButtonIs(for sender: NSControl) -> NSButton {
-        var currentButton: NSButton
-        switch sender.tag {
-        case 1:
-            currentButton = digit2Btn
-        case 2:
-            currentButton = digit3Btn
-        case 3:
-            currentButton = digit4Btn
-        default:
-            currentButton = digit1Btn
-        }
-        return currentButton
-    }
-    
-    
-    
     
     @IBAction func submitGuess(_ sender: Any) {
         
@@ -208,26 +148,6 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         num8CheckBox.state = NSControl.StateValue.on
         num9CheckBox.state = NSControl.StateValue.on
         num0CheckBox.state = NSControl.StateValue.on
-        
-        digit1Btn.title = String(checkBoxNumbers[0])
-        digit2Btn.title = String(checkBoxNumbers[0])
-        digit3Btn.title = String(checkBoxNumbers[0])
-        digit4Btn.title = String(checkBoxNumbers[0])
-        
-        digit1Btn.state = NSControl.StateValue.on
-        digit2Btn.state = NSControl.StateValue.on
-        digit3Btn.state = NSControl.StateValue.on
-        digit4Btn.state = NSControl.StateValue.on
-        
-        digit1Stepper.isEnabled = true
-        digit2Stepper.isEnabled = true
-        digit3Stepper.isEnabled = true
-        digit4Stepper.isEnabled = true
-        
-        digit1Stepper.intValue = 0
-        digit2Stepper.intValue = 0
-        digit3Stepper.intValue = 0
-        digit4Stepper.intValue = 0
         
         guess.stringValue = ""
         guesses.removeAll()
