@@ -624,7 +624,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="7" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu">
+                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="7" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu" userLabel="Digits Stack View">
                                 <rect key="frame" x="30" y="257" width="217" height="22"/>
                                 <subviews>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apf-4D-C1T" userLabel="1st Digit">
