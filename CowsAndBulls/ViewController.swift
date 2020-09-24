@@ -86,7 +86,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         }
         return currentStepper
     }
-  
+    
     func currentButtonIs(for sender: NSControl) -> NSButton {
         var currentButton: NSButton
         switch sender.tag {
@@ -125,8 +125,13 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         
         if resultArray == [4,0] {
             let alert = NSAlert()
-            alert.messageText = "You win !!!"
-            alert.informativeText = "Congratulations! Click OK to play again.You did it in \(guesses.count) turns"
+            alert.messageText = "You win !!! The number was: \(answer)"
+            alert.informativeText = """
+                Congratulations!
+                You did it in \(guesses.count) turns.
+
+                Click OK to play again.
+                """
             alert.runModal()
             
             startNewGame()
@@ -213,6 +218,16 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         digit2Btn.state = NSControl.StateValue.on
         digit3Btn.state = NSControl.StateValue.on
         digit4Btn.state = NSControl.StateValue.on
+        
+        digit1Stepper.isEnabled = true
+        digit2Stepper.isEnabled = true
+        digit3Stepper.isEnabled = true
+        digit4Stepper.isEnabled = true
+        
+        digit1Stepper.intValue = 0
+        digit2Stepper.intValue = 0
+        digit3Stepper.intValue = 0
+        digit4Stepper.intValue = 0
         
         guess.stringValue = ""
         guesses.removeAll()
