@@ -624,8 +624,8 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="9" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu">
-                                <rect key="frame" x="30" y="257" width="223" height="22"/>
+                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="7" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu">
+                                <rect key="frame" x="30" y="257" width="217" height="22"/>
                                 <subviews>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apf-4D-C1T" userLabel="1st Digit">
                                         <rect key="frame" x="0.0" y="0.0" width="49" height="22"/>
@@ -666,7 +666,7 @@ DQ
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zf-ry-lKQ" userLabel="2nd Digit">
-                                        <rect key="frame" x="58" y="0.0" width="49" height="22"/>
+                                        <rect key="frame" x="56" y="0.0" width="49" height="22"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-TN-SIx">
                                                 <rect key="frame" x="-6" y="-6" width="49" height="32"/>
@@ -699,7 +699,7 @@ DQ
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-Cb-MOa" userLabel="3rd Digit">
-                                        <rect key="frame" x="116" y="0.0" width="49" height="22"/>
+                                        <rect key="frame" x="112" y="0.0" width="49" height="22"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="erh-wT-0vS">
                                                 <rect key="frame" x="-6" y="-6" width="49" height="32"/>
@@ -732,7 +732,7 @@ DQ
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="-1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfo-KI-HgN" userLabel="4th Digit">
-                                        <rect key="frame" x="174" y="0.0" width="49" height="22"/>
+                                        <rect key="frame" x="168" y="0.0" width="49" height="22"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-2p-yXF">
                                                 <rect key="frame" x="-6" y="-6" width="49" height="32"/>
