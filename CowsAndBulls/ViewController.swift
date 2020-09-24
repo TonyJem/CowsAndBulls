@@ -24,6 +24,18 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet var guess: NSTextField!
     
     
+    @IBOutlet var digit1Combo: NSComboBox!
+    @IBOutlet var digit2Combo: NSComboBox!
+    @IBOutlet var digit3Combo: NSComboBox!
+    @IBOutlet var digit4Combo: NSComboBox!
+    
+    @IBOutlet var checkBoxDigit1: NSButton!
+    @IBOutlet var checkBoxDigit2: NSButton!
+    @IBOutlet var checkBoxDigit3: NSButton!
+    @IBOutlet var checkBoxDigit4: NSButton!
+    
+    //   Array to store Combo items values
+    let numbersForDigit1 = Array(0...9)
     
     //    Correct answer
     var answer = ""
@@ -148,6 +160,28 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         num8CheckBox.state = NSControl.StateValue.on
         num9CheckBox.state = NSControl.StateValue.on
         num0CheckBox.state = NSControl.StateValue.on
+        
+        
+        digit1Combo.removeAllItems()
+        digit1Combo.addItems(withObjectValues: numbersForDigit1)
+        digit1Combo.stringValue = ""
+        
+        digit2Combo.removeAllItems()
+        digit2Combo.addItems(withObjectValues: numbersForDigit1)
+        digit2Combo.stringValue = ""
+        
+        digit3Combo.removeAllItems()
+        digit3Combo.addItems(withObjectValues: numbersForDigit1)
+        digit3Combo.stringValue = ""
+        
+        digit4Combo.removeAllItems()
+        digit4Combo.addItems(withObjectValues: numbersForDigit1)
+        digit4Combo.stringValue = ""
+        
+        checkBoxDigit1.state = NSControl.StateValue.off
+        checkBoxDigit2.state = NSControl.StateValue.off
+        checkBoxDigit3.state = NSControl.StateValue.off
+        checkBoxDigit4.state = NSControl.StateValue.off
         
         guess.stringValue = ""
         guesses.removeAll()

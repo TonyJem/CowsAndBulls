@@ -398,13 +398,13 @@ DQ
                                 </customSpacing>
                             </stackView>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAq-QM-Z9z">
-                                <rect key="frame" x="0.0" y="0.0" width="370" height="240"/>
+                                <rect key="frame" x="0.0" y="0.0" width="370" height="218"/>
                                 <clipView key="contentView" id="JbE-9d-odX">
-                                    <rect key="frame" x="1" y="0.0" width="368" height="239"/>
+                                    <rect key="frame" x="1" y="0.0" width="368" height="217"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="tNf-FG-ikA" viewBased="YES" id="Kpm-Xc-tkw">
-                                            <rect key="frame" x="0.0" y="0.0" width="368" height="214"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="368" height="192"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -624,63 +624,145 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="7" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu" userLabel="Digits Stack View">
-                                <rect key="frame" x="30" y="260" width="405" height="19"/>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-ZH-biu" userLabel="Digits Stack View">
+                                <rect key="frame" x="30" y="223" width="215" height="36"/>
                                 <subviews>
-                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzP-EY-aun">
-                                        <rect key="frame" x="0.0" y="-4" width="99" height="25"/>
-                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="EMg-c7-oSR">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <objectValues>
-                                                <string>Item 1</string>
-                                                <string>Item 2</string>
-                                                <string>Item 3</string>
-                                                <string>Item</string>
-                                            </objectValues>
-                                        </comboBoxCell>
-                                    </comboBox>
-                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-YY-0LY">
-                                        <rect key="frame" x="103" y="-4" width="99" height="25"/>
-                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="Mwu-Yd-klp">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <objectValues>
-                                                <string>Item 1</string>
-                                                <string>Item 2</string>
-                                                <string>Item 3</string>
-                                            </objectValues>
-                                        </comboBoxCell>
-                                    </comboBox>
-                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzG-kW-M14">
-                                        <rect key="frame" x="206" y="-4" width="99" height="25"/>
-                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="Teg-30-awR">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <objectValues>
-                                                <string>Item 1</string>
-                                                <string>Item 2</string>
-                                                <string>Item 3</string>
-                                            </objectValues>
-                                        </comboBoxCell>
-                                    </comboBox>
-                                    <comboBox verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owr-JL-8XS">
-                                        <rect key="frame" x="309" y="-4" width="99" height="25"/>
-                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="bIg-GJ-Fbc">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <objectValues>
-                                                <string>Item 1</string>
-                                                <string>Item 2</string>
-                                                <string>Item 3</string>
-                                            </objectValues>
-                                        </comboBoxCell>
-                                    </comboBox>
+                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="3" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYH-T5-tlW">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                        <subviews>
+                                            <comboBox verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzP-EY-aun">
+                                                <rect key="frame" x="0.0" y="13" width="53" height="25"/>
+                                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="EMg-c7-oSR">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <objectValues>
+                                                        <string>Item 1</string>
+                                                        <string>Item 2</string>
+                                                        <string>Item 3</string>
+                                                    </objectValues>
+                                                </comboBoxCell>
+                                            </comboBox>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JVP-ze-8bz">
+                                                <rect key="frame" x="14" y="-2" width="22" height="18"/>
+                                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="v6r-Us-Pkx">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="3" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngH-uE-wIs">
+                                        <rect key="frame" x="55" y="0.0" width="50" height="36"/>
+                                        <subviews>
+                                            <comboBox verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdt-hU-yHZ">
+                                                <rect key="frame" x="0.0" y="13" width="53" height="25"/>
+                                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="Mpr-Cz-cJU">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <objectValues>
+                                                        <string>Item 1</string>
+                                                        <string>Item 2</string>
+                                                        <string>Item 3</string>
+                                                    </objectValues>
+                                                </comboBoxCell>
+                                            </comboBox>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YPw-9I-3H2">
+                                                <rect key="frame" x="14" y="-2" width="22" height="18"/>
+                                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="nd0-gh-Ccu">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="3" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nXV-83-Ytk">
+                                        <rect key="frame" x="110" y="0.0" width="50" height="36"/>
+                                        <subviews>
+                                            <comboBox verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcg-oH-8Ic">
+                                                <rect key="frame" x="0.0" y="13" width="53" height="25"/>
+                                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="EyW-v4-yux">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <objectValues>
+                                                        <string>Item 1</string>
+                                                        <string>Item 2</string>
+                                                        <string>Item 3</string>
+                                                    </objectValues>
+                                                </comboBoxCell>
+                                            </comboBox>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Fk-Ab-qjX">
+                                                <rect key="frame" x="14" y="-2" width="22" height="18"/>
+                                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="N2N-bt-lVA">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="3" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77v-br-2xU">
+                                        <rect key="frame" x="165" y="0.0" width="50" height="36"/>
+                                        <subviews>
+                                            <comboBox verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URH-0H-4EF">
+                                                <rect key="frame" x="0.0" y="13" width="53" height="25"/>
+                                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" completes="NO" numberOfVisibleItems="10" id="S5V-lX-9e0">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <objectValues>
+                                                        <string>Item 1</string>
+                                                        <string>Item 2</string>
+                                                        <string>Item 3</string>
+                                                    </objectValues>
+                                                </comboBoxCell>
+                                            </comboBox>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-no-LWj">
+                                                <rect key="frame" x="14" y="-2" width="22" height="18"/>
+                                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="jla-ni-se5">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="t7U-Bo-DUG"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -703,14 +785,22 @@ DQ
                             <constraint firstItem="Vix-Up-QVr" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Kd3-v6-n2O"/>
                             <constraint firstItem="jAq-QM-Z9z" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Ogo-TY-vYR"/>
                             <constraint firstAttribute="trailing" secondItem="jAq-QM-Z9z" secondAttribute="trailing" id="Rbd-I6-Mnu"/>
-                            <constraint firstItem="jAq-QM-Z9z" firstAttribute="top" secondItem="nAf-ZH-biu" secondAttribute="bottom" constant="20" id="SYs-B0-PKw"/>
+                            <constraint firstItem="jAq-QM-Z9z" firstAttribute="top" secondItem="nAf-ZH-biu" secondAttribute="bottom" constant="5" id="SYs-B0-PKw"/>
                             <constraint firstAttribute="trailing" secondItem="Vix-Up-QVr" secondAttribute="trailing" constant="20" id="iE1-fl-VRc"/>
-                            <constraint firstItem="nAf-ZH-biu" firstAttribute="top" secondItem="Vix-Up-QVr" secondAttribute="bottom" constant="14" id="kEp-g0-irZ"/>
+                            <constraint firstItem="nAf-ZH-biu" firstAttribute="top" secondItem="Vix-Up-QVr" secondAttribute="bottom" constant="34" id="kEp-g0-irZ"/>
                             <constraint firstItem="jAq-QM-Z9z" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="lxF-42-66q"/>
                             <constraint firstItem="nAf-ZH-biu" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="30" id="qNo-Vd-iaa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="checkBoxDigit1" destination="JVP-ze-8bz" id="5fL-FA-Jv5"/>
+                        <outlet property="checkBoxDigit2" destination="YPw-9I-3H2" id="GVp-k2-sMG"/>
+                        <outlet property="checkBoxDigit3" destination="0Fk-Ab-qjX" id="Yec-3b-LKJ"/>
+                        <outlet property="checkBoxDigit4" destination="Xgp-no-LWj" id="vzx-z9-2HC"/>
+                        <outlet property="digit1Combo" destination="EzP-EY-aun" id="ctY-vb-sr8"/>
+                        <outlet property="digit2Combo" destination="Rdt-hU-yHZ" id="R8h-sQ-OvO"/>
+                        <outlet property="digit3Combo" destination="Hcg-oH-8Ic" id="Ifa-BA-a5g"/>
+                        <outlet property="digit4Combo" destination="URH-0H-4EF" id="g3s-kw-fV8"/>
                         <outlet property="guess" destination="Ojw-t4-5UC" id="36j-51-S0r"/>
                         <outlet property="num0CheckBox" destination="pO0-Ke-yn1" id="vEc-jz-nBb"/>
                         <outlet property="num1CheckBox" destination="i5Z-cK-sHD" id="osB-NH-1UX"/>
@@ -727,7 +817,7 @@ DQ
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="870"/>
+            <point key="canvasLocation" x="75" y="878"/>
         </scene>
     </scenes>
 </document>
